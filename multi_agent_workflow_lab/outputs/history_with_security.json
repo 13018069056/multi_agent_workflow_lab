@@ -1,0 +1,62 @@
+[
+  {
+    "step": 1,
+    "node": "start",
+    "status": "created",
+    "message": "Implement add(a, b) function that returns sum of two numbers"
+  },
+  {
+    "step": 2,
+    "node": "planner",
+    "status": "planning",
+    "message": "Created 5-step plan with security review"
+  },
+  {
+    "step": 3,
+    "node": "programmer",
+    "status": "coding",
+    "message": "Generated code version 1"
+  },
+  {
+    "step": 4,
+    "node": "reviewer",
+    "status": "reviewing",
+    "message": "Code uses subtraction, does not meet add requirement."
+  },
+  {
+    "step": 5,
+    "node": "router",
+    "status": "reviewing",
+    "message": "Review failed, return to Programmer"
+  },
+  {
+    "step": 6,
+    "node": "programmer",
+    "status": "coding",
+    "message": "Generated code version 2"
+  },
+  {
+    "step": 7,
+    "node": "reviewer",
+    "status": "reviewing",
+    "message": "Code logic uses addition correctly."
+  },
+  {
+    "step": 8,
+    "node": "security_reviewer",
+    "status": "security_review",
+    "message": "Security review passed, no dangerous patterns found"
+  },
+  {
+    "step": 9,
+    "node": "tester",
+    "status": "testing",
+    "message": "Test passed"
+  },
+  {
+    "step": 10,
+    "node": "checkpoint",
+    "status": "done",
+    "message": "Checkpoint auto-approved, workflow finished"
+  }
+]

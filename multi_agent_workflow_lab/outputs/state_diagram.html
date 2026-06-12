@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>状态转移图</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        h1 { color: #333; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>多 Agent 工作流状态转移图</h1>
+        <div class="mermaid">
+graph TD
+    start([start])
+    planner([planner])
+    programmer([programmer])
+    reviewer([reviewer])
+    router([router])
+    tester([tester])
+    checkpoint([checkpoint])
+
+    start --> planner
+    planner --> programmer
+    programmer --> reviewer
+    reviewer -->|失败| router
+    router --> programmer
+    programmer --> reviewer
+    reviewer -->|成功| tester
+    tester -->|成功| checkpoint
+        </div>
+    </div>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+</body>
+</html>
